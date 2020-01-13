@@ -12,13 +12,27 @@ var sceltaUtente = prompt('Scegli tra pari o dispari');
 console.log(sceltaUtente);
 
 // Chiedo all'utente di scegliere un numero tra 1 e 5
-var numero = parseInt(prompt('scegli un numero tra 1 e 5'));
+var numero = parseInt(prompt('Scegli un numero tra 1 e 5'));
 console.log(numero);
 
-//Genero un numero random per il computer
+//Utilizzo Math.round e Math.random per generare un numero casuale
 var numRandom = Math.round(Math.random() * 5);
 console.log(numRandom);
 
 // Effettuo la somma dei numeri ottenuti
 var somma = numero + numRandom;
 console.log(somma);
+
+// Controllo se il risultato è pari o dispari e la scelta dell'utente effettuata all'inizio. Da qui scrivo un if con le varie possibilità
+if (somma % 2 == 0 && sceltaUtente == 'pari'){
+  console.log('hai vinto la tua mano!');
+}
+else if (somma % 2 != 0 && sceltaUtente == 'dispari') {
+  console.log('hai vinto la tua mano!');
+}
+else if (somma % 2 != 0 && sceltaUtente == 'pari') {
+  console.log('hai perso la tua mano!')
+}
+else if (somma % 2 == 0 && sceltaUtente == 'dispari') {
+  console.log('hai perso la tua mano!')
+}
